@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Button, Props } from '../src/Button';
+import { action } from '@storybook/addon-actions';
 
 /**
  * configure metadata for the stories of this button
@@ -10,6 +11,7 @@ const meta: Meta = {
   title: 'Button',
   component: Button,
   argTypes: {
+    onClick: { action: 'primary click!!' },
     children: {
       defaultValue: 'Primary Button',
     },
@@ -36,4 +38,5 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   variant: 'secondary',
   children: 'Secondary Button',
+  onClick: action('secondary click!!'),
 };

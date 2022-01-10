@@ -6,6 +6,7 @@
 - [Run locally](#run-locally-)
 - [Creating our own button](#creating-our-own-button-)
 - [Using templates](#using-templates-)
+- [Actions](#actions-)
 
 ## `TSDX` 📦
 
@@ -107,3 +108,12 @@ export const Default = () => <Button variant="primary">CLICK ME</Button>;
 
 - through templates we replace all rendering functions within a story with just one
 - we use `Template.bind({})`, which makes clones of the template
+
+## Actions ⚡️
+
+⬆️ [Back to top](#table-of-contents-)
+
+**Where?** : `Button.stories.tsx`
+
+- we can create trigger events, like clicking on a button, by passing the `onClick` property in the `argTypes`
+- we can add custom actions to each button through adding the `import { action } from '@storybook/addon-actions';` and using it by calling the `action` function: `onClick: action('secondary click!!')`
