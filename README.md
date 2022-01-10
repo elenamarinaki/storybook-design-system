@@ -90,3 +90,8 @@ export default meta;
  */
 export const Default = () => <Button variant="primary">CLICK ME</Button>;
 ```
+
+### Styling the buttons 💅
+
+- the styling can be done with any technology of our choice: `CSS`, `SASS`, `Styled-Components`, etc.
+- this can happen with **inline CSS** in the `Button.tsx` file
