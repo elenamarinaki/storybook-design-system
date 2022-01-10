@@ -1,12 +1,12 @@
 # Storybook Design System 👩‍🎨
 
-Table of Contents 🌳
+## Table of Contents 🌳
 
 - [TSDX](#tsdx-)
 
 ## `TSDX` 📦
 
-⬆️ [Bach to top](#table-of-contents-)
+⬆️ [Back to top](#table-of-contents-)
 
 - is meant for libraries (we are not creating an app!)
 - we are using `tsdx` to quickly create a TypeScript project
