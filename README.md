@@ -52,16 +52,41 @@ tsconfig.json
 ```javascript
 import React, { HTMLAttributes, ReactNode } from 'react';
 
-interface Props extends HTMLAttributes<HTMLButtonElement> {
+export interface Props extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant: 'primary' | 'secondary';
 }
 
-const Button = ({ children, ...props }: Props) => {
+export const Button = ({ children, ...props }: Props) => {
   return <button {...props}>{children}</button>;
 };
-
-export default Button;
 ```
 
+**⚠️ `Storybook` does not like `export default` here!! (but it's ok in the `stories` files - see next points 🤔)**
+
 - the `HTMLAttributes<HTMLButtonElement>` prepares our component to expect attributes of a specific kind, in this case: **button**.
+- ⚠️ this button _won't appear_ in our `Storybook`, until we create it's own 'story'
+- we create `Button.stories.tsx` under `stories`:
+
+```javascript
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
+import { Button, Props } from '../src/Button';
+
+/**
+ * configure metadata for the stories of this button
+ */
+
+const meta: Meta = {
+  title: 'Button',
+  component: Button,
+};
+
+export default meta;
+
+/**
+ * create a named function that RETURNS the RENDERING of our component
+ * this will make our component (story) appear in the storybook
+ */
+export const Default = () => <Button variant="primary">CLICK ME</Button>;
+```
