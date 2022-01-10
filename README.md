@@ -5,6 +5,7 @@
 - [TSDX](#tsdx-)
 - [Run locally](#run-locally-)
 - [Creating our own button](#creating-our-own-button-)
+- [Using templates](#using-templates-)
 
 ## `TSDX` 📦
 
@@ -93,5 +94,16 @@ export const Default = () => <Button variant="primary">CLICK ME</Button>;
 
 ### Styling the buttons 💅
 
+**Where?** : `Button.tsx`
+
 - the styling can be done with any technology of our choice: `CSS`, `SASS`, `Styled-Components`, etc.
 - this can happen with **inline CSS** in the `Button.tsx` file
+
+## Using templates 🏛
+
+⬆️ [Back to top](#table-of-contents-)
+
+**Where?** : `Button.stories.tsx`
+
+- through templates we replace all rendering functions within a story with just one
+- we use `Template.bind({})`, which makes clones of the template

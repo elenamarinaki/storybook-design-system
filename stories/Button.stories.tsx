@@ -9,13 +9,31 @@ import { Button, Props } from '../src/Button';
 const meta: Meta = {
   title: 'Button',
   component: Button,
+  argTypes: {
+    children: {
+      defaultValue: 'Primary Button',
+    },
+  },
 };
 
 export default meta;
 
 /**
+ * creating a template to reduce the number of rendering functions
+ */
+const Template: Story<Props> = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+export const Secondary = Template.bind({});
+
+/**
  * create a named function that RETURNS the RENDERING of our component
  * this will make our component (story) appear in the storybook
  */
-export const Primary = () => <Button variant="primary">CLICK ME</Button>;
-export const Secondary = () => <Button variant="secondary">CLICK ME 2</Button>;
+// export const Primary = () => <Button variant="primary">CLICK ME</Button>;
+// export const Secondary = () => <Button variant="secondary">CLICK ME 2</Button>;
+
+Secondary.args = {
+  variant: 'secondary',
+  children: 'Secondary Button',
+};
