@@ -17,4 +17,5 @@ export default meta;
  * create a named function that RETURNS the RENDERING of our component
  * this will make our component (story) appear in the storybook
  */
-export const Default = () => <Button variant="primary">CLICK ME</Button>;
+export const Primary = () => <Button variant="primary">CLICK ME</Button>;
+export const Secondary = () => <Button variant="secondary">CLICK ME 2</Button>;
