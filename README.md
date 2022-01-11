@@ -8,6 +8,7 @@
 - [Using templates](#using-templates-)
 - [Actions](#actions-)
 - [Docs](#docs-)
+- [Install add-ons](#install-add-ons-)
 
 ## `TSDX` 📦
 
@@ -127,3 +128,11 @@ export const Default = () => <Button variant="primary">CLICK ME</Button>;
 
 - the extra documentation in the `Docs` tab in Storybook comes from the comments of this file!
   How cool is that?! 🥳
+
+## Install add-ons 📥
+
+⬆️ [Back to top](#table-of-contents-)
+
+- we install the `a11y` addon: `npm install -D @storybook/addon-a11y`
+- we add it in the addons list at `main.js` under inside `.storybook`
+- we have to restart the `storybook` server to see the addon appearing on our page
