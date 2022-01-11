@@ -7,6 +7,7 @@
 - [Creating our own button](#creating-our-own-button-)
 - [Using templates](#using-templates-)
 - [Actions](#actions-)
+- [Docs](#docs-)
 
 ## `TSDX` 📦
 
@@ -117,3 +118,12 @@ export const Default = () => <Button variant="primary">CLICK ME</Button>;
 
 - we can create trigger events, like clicking on a button, by passing the `onClick` property in the `argTypes`
 - we can add custom actions to each button through adding the `import { action } from '@storybook/addon-actions';` and using it by calling the `action` function: `onClick: action('secondary click!!')`
+
+## Docs 📄
+
+⬆️ [Back to top](#table-of-contents-)
+
+**Where?** : `Button.tsx`
+
+- the extra documentation in the `Docs` tab in Storybook comes from the comments of this file!
+  How cool is that?! 🥳
